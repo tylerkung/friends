@@ -53,7 +53,12 @@
                 transform: translateX(0%);
             }
         }
+        .slide-content, .secondary-content{
+            position: relative;
+            z-index: 10;
+        }
         &:not(.active){
+            pointer-events: none;
             .image-container{
                 transform: translateX(105%);
             }
@@ -62,11 +67,30 @@
             }
         }
         &.active{
+            z-index: 5;
             .image-container, .slide-image img{
+                transition-delay: 0.4s;
+            }
+            h1, h2{
+                opacity: 1;
+                transform: translateY(0px);
                 transition-delay: 0.5s;
+            }
+            p{
+                opacity: 1;
+                transform: translateY(0px);
+                transition-delay: 0.6s;
             }
         }
         &.slide-1{
+            .slide-content{
+                grid-column: 5 / span 12;
+                grid-row: 3 / span 3;
+            }
+            .secondary-content{
+                grid-column: 3 / span 4;
+                grid-row: 8 / span 8;
+            }
             .slide-image-1{
                 grid-column: 8 / span 11;
                 grid-row: 8 / span 8;
@@ -81,18 +105,103 @@
             }
         }
         &.slide-2{
+            .slide-content{
+                grid-column: 2 / span 9;
+                grid-row: 3 / span 6;
+            }
             .slide-image-1{
                 grid-column: 8 / span 9;
-                grid-row: 1 / span 16;
+                grid-row: 1 / span 15;
             }
             .slide-image-2{
                 grid-column: 1 / span 7;
-                grid-row: 10 / span 6;
+                grid-row: 9 / span 6;
             }
             .slide-image-3{
-                grid-column: 5 / span 6;
-                grid-row: 6 / span 4;
+                grid-column: 5 / span 4;
+                grid-row: 7 / span 3;
             }
         }
+        &.slide-3{
+            .slide-content{
+                grid-column: 3 / span 13;
+                grid-row: 3 / span 6;
+            }
+            .secondary-content{
+                grid-column: 11 / span 5;
+                grid-row: 10 / span 6;
+            }
+            .slide-image-1{
+                grid-column: 8 / span 8;
+                grid-row: 3 / span 6;
+            }
+            .slide-image-2{
+                grid-column: 3 / span 5;
+                grid-row: 6 / span 10;
+            }
+            .slide-image-3{
+                grid-column: 7 / span 3;
+                grid-row: 8 / span 3;
+            }
+        }
+    }
+}
+
+.home-template{
+    .home-grid{
+        h1, h2{
+            font-size: 3.7rem;
+            white-space: nowrap;
+            opacity: 0;
+            transform: translateY(15px);
+            transition: all 0.3s ease;
+            margin-bottom: 1rem;
+        }
+        p{
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all 0.2s ease;
+            &.subtitle{
+                font-size: 2rem;
+                padding-left: 30px;
+                border-left: 4px solid #fff;
+                margin-bottom: 40px;
+                line-height: 1.7;
+            }
+        }
+    }
+    .nav{
+        .scroller{
+            grid-column: 1 / span 1;
+            grid-row: 11 / span 6;
+            position: absolute;
+            top: 0;
+            height: 100%;
+            width: 1px;
+            left: 50%;
+            background-color: #fff;
+            overflow: hidden;
+            z-index: 9;
+            &:before{
+                content: '';
+                position: absolute;
+                height: 48px;
+                background-color: $site_black;
+                width: 1px;
+                left: 0;
+                animation: scroller;
+                animation-duration: 2.5s;
+                animation-timing-function: ease;
+                animation-iteration-count: infinite;
+            }
+        }
+    }
+}
+@keyframes scroller{
+    0%{
+        top: -20%;
+    }
+    100%{
+        top: 120%;
     }
 }

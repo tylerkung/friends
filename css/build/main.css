@@ -1,17 +1,111 @@
 /* sass --watch css/sass/main.scss:css/build
  * to compile
  */
+@import url("https://fonts.googleapis.com/css?family=Press+Start+2P|Roboto+Mono:300,300i,400,700");
 body {
   background-color: #212121;
   font-size: 18px;
   color: #eee;
-  line-height: 1.8;
+  line-height: 2;
+}
+
+h1 {
+  font-family: "Press Start 2P", Helvetica, Arial, Times, serif;
+}
+
+h2 {
+  font-family: "Press Start 2P", Helvetica, Arial, Times, serif;
+}
+
+h3 {
+  font-family: "Roboto Mono", Helvetica, Arial, Times, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+p {
+  font-family: "Roboto Mono", Helvetica, Arial, Times, sans-serif;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+}
+
+img {
+  max-width: 100%;
 }
 
 .lead {
   font-size: 2rem;
 }
 
+.btn {
+  border-radius: 0;
+  padding: 1rem 2rem;
+}
+
+.btn-primary {
+  background-color: #fff;
+  border-color: #fff;
+  color: #484c55;
+}
+.btn-primary:hover {
+  color: #fff;
+  background-color: #484c55;
+  border-color: #fff;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  border-color: #fff;
+}
+.btn-secondary:hover {
+  background-color: #484c55;
+  border-color: #fff;
+}
+
+span.btn + span.btn {
+  margin-left: 25px;
+}
+
+.main-content {
+  min-height: 100vh;
+}
+.main-content .container {
+  min-height: 100vh;
+}
+.main-content .secondary-header {
+  background-color: #fff;
+  min-height: 200px;
+  color: #484c55;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-right: 40px;
+  padding-left: calc((100% - 1200px)/2);
+  margin-bottom: 3rem;
+}
+@media (min-width: 768px) {
+  .main-content .secondary-header {
+    width: 700px;
+  }
+}
+@media (min-width: 992px) {
+  .main-content .secondary-header {
+    width: 800px;
+  }
+}
+@media (min-width: 1200px) {
+  .main-content .secondary-header {
+    width: 1200px;
+  }
+}
+.main-content .secondary-header p {
+  color: #484c55;
+  margin-bottom: 0;
+}
+
+.container {
+  padding-left: calc((100% - 1200px)/2);
+  margin-left: 0;
+}
 @media (min-width: 768px) {
   .container {
     width: 700px;
@@ -24,7 +118,7 @@ body {
 }
 @media (min-width: 1200px) {
   .container {
-    width: 1040px;
+    width: 1100px;
   }
 }
 
@@ -84,14 +178,42 @@ body {
   transition: transform 0.5s ease;
   transform: translateX(0%);
 }
+.home-grid .slide .slide-content, .home-grid .slide .secondary-content {
+  position: relative;
+  z-index: 10;
+}
+.home-grid .slide:not(.active) {
+  pointer-events: none;
+}
 .home-grid .slide:not(.active) .image-container {
   transform: translateX(105%);
 }
 .home-grid .slide:not(.active) .slide-image img {
   transform: translateX(-100%);
 }
+.home-grid .slide.active {
+  z-index: 5;
+}
 .home-grid .slide.active .image-container, .home-grid .slide.active .slide-image img {
+  transition-delay: 0.4s;
+}
+.home-grid .slide.active h1, .home-grid .slide.active h2 {
+  opacity: 1;
+  transform: translateY(0px);
   transition-delay: 0.5s;
+}
+.home-grid .slide.active p {
+  opacity: 1;
+  transform: translateY(0px);
+  transition-delay: 0.6s;
+}
+.home-grid .slide.slide-1 .slide-content {
+  grid-column: 5/span 12;
+  grid-row: 3/span 3;
+}
+.home-grid .slide.slide-1 .secondary-content {
+  grid-column: 3/span 4;
+  grid-row: 8/span 8;
 }
 .home-grid .slide.slide-1 .slide-image-1 {
   grid-column: 8/span 11;
@@ -105,19 +227,96 @@ body {
   grid-column: 1/span 7;
   grid-row: 1/span 6;
 }
+.home-grid .slide.slide-2 .slide-content {
+  grid-column: 2/span 9;
+  grid-row: 3/span 6;
+}
 .home-grid .slide.slide-2 .slide-image-1 {
   grid-column: 8/span 9;
-  grid-row: 1/span 16;
+  grid-row: 1/span 15;
 }
 .home-grid .slide.slide-2 .slide-image-2 {
   grid-column: 1/span 7;
-  grid-row: 10/span 6;
+  grid-row: 9/span 6;
 }
 .home-grid .slide.slide-2 .slide-image-3 {
-  grid-column: 5/span 6;
-  grid-row: 6/span 4;
+  grid-column: 5/span 4;
+  grid-row: 7/span 3;
+}
+.home-grid .slide.slide-3 .slide-content {
+  grid-column: 3/span 13;
+  grid-row: 3/span 6;
+}
+.home-grid .slide.slide-3 .secondary-content {
+  grid-column: 11/span 5;
+  grid-row: 10/span 6;
+}
+.home-grid .slide.slide-3 .slide-image-1 {
+  grid-column: 8/span 8;
+  grid-row: 3/span 6;
+}
+.home-grid .slide.slide-3 .slide-image-2 {
+  grid-column: 3/span 5;
+  grid-row: 6/span 10;
+}
+.home-grid .slide.slide-3 .slide-image-3 {
+  grid-column: 7/span 3;
+  grid-row: 8/span 3;
 }
 
+.home-template .home-grid h1, .home-template .home-grid h2 {
+  font-size: 3.7rem;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateY(15px);
+  transition: all 0.3s ease;
+  margin-bottom: 1rem;
+}
+.home-template .home-grid p {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.2s ease;
+}
+.home-template .home-grid p.subtitle {
+  font-size: 2rem;
+  padding-left: 30px;
+  border-left: 4px solid #fff;
+  margin-bottom: 40px;
+  line-height: 1.7;
+}
+.home-template .nav .scroller {
+  grid-column: 1/span 1;
+  grid-row: 11/span 6;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 1px;
+  left: 50%;
+  background-color: #fff;
+  overflow: hidden;
+  z-index: 9;
+}
+.home-template .nav .scroller:before {
+  content: "";
+  position: absolute;
+  height: 48px;
+  background-color: #484c55;
+  width: 1px;
+  left: 0;
+  animation: scroller;
+  animation-duration: 2.5s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+}
+
+@keyframes scroller {
+  0% {
+    top: -20%;
+  }
+  100% {
+    top: 120%;
+  }
+}
 .nav {
   display: grid;
   height: 100vh;
@@ -125,6 +324,8 @@ body {
   position: absolute;
   top: 0;
   left: 0;
+  grid-template-columns: repeat(16, 1fr);
+  grid-template-rows: repeat(16, 1fr);
 }
 
 /*# sourceMappingURL=main.css.map */
