@@ -1,1 +1,6 @@
-body{ background-color: #fefefe; }
+/* sass --watch css/sass/main.scss:css/build
+ * to compile
+ */
+
+@import "sass/defaults.scss";
+@import "sass/home.scss";

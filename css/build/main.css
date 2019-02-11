@@ -1,5 +1,37 @@
+/* sass --watch css/sass/main.scss:css/build
+ * to compile
+ */
 body {
-  background-color: #fefefe;
+  background-color: #fafafa;
+  font-size: 16px;
+  color: #484c55;
+}
+
+.lead {
+  font-size: 2rem;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 700px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 800px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1040px;
+  }
+}
+
+.home-grid .slide {
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  grid-template-rows: repeat(16, 1fr);
+  height: 100vh;
 }
 
 /*# sourceMappingURL=main.css.map */
