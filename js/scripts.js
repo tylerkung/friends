@@ -29,6 +29,9 @@ var app = new Vue({
 
 $(document).ready(function(){
     $('.home-grid .slide').first().addClass("active");
+    $('[data-parallax="scroll"]').each(function(){
+        $(this).parallax({imageSrc: $(this).attr('data-image-src')});
+    });
 })
 
 document.addEventListener("turbolinks:load", function() {
