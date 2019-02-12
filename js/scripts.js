@@ -32,5 +32,5 @@ $(document).ready(function(){
 })
 
 document.addEventListener("turbolinks:load", function() {
-  $('h1, h2').addClass('animated fadeIn');
+
 });
