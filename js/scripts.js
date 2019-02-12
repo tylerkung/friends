@@ -30,10 +30,17 @@ var app = new Vue({
 $(document).ready(function(){
     $('.home-grid .slide').first().addClass("active");
     $('[data-parallax="scroll"]').each(function(){
-        $(this).parallax({imageSrc: $(this).attr('data-image-src')});
+        $(this).parallax({
+            imageSrc: $(this).attr('data-image-src'),
+            speed: 0.8
+        });
     });
 })
 
-document.addEventListener("turbolinks:load", function() {
+document.addEventListener("turbolinks:click", function() {
+    $('.page-trans').addClass("animate");
+});
 
+document.addEventListener("turbolinks:load", function() {
+$('.page-trans').addClass("animate");
 });

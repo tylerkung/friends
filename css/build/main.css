@@ -97,9 +97,28 @@ span.btn + span.btn {
   height: 100vh;
   background-color: #484c55;
   z-index: 20;
-  transform: translateX(100%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+.page-trans.animate {
+  animation: trans 2s forwards;
 }
 
+@keyframes trans {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 .home-grid {
   height: 100vh;
 }
