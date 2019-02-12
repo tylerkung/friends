@@ -32,5 +32,9 @@ $(document).ready(function(){
 })
 
 document.addEventListener("turbolinks:click", function() {
-  alert("click");
-})
+  $('body').addClass('animate');
+});
+
+document.addEventListener("turbolinks:load", function() {
+  $('body').addClass('load');
+});
