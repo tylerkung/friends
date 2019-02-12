@@ -30,3 +30,7 @@ var app = new Vue({
 $(document).ready(function(){
     $('.home-grid .slide').first().addClass("active");
 })
+
+document.addEventListener("turbolinks:click", function() {
+  alert("click");
+})
