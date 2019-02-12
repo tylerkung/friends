@@ -7,4 +7,18 @@
     left: 0;
     grid-template-columns: repeat(16, 1fr);
     grid-template-rows: repeat(16, 1fr);
+    .logo-link{
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 11;
+        &:before{
+            content: '';
+            height: 30px;
+            width: 30px;
+            background-color: #fff;
+        }
+    }
 }

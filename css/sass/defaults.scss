@@ -14,9 +14,14 @@ body{
 }
 h1{
     font-family: "Press Start 2P", Helvetica, Arial, Times, serif;
+    margin-bottom: 1.5rem;
+    font-size: 5rem;
+    text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    color: #fff;
 }
 h2{
     font-family: "Press Start 2P", Helvetica, Arial, Times, serif;
+    margin-bottom: 1.5rem;
 }
 h3{
     font-family: "Roboto Mono", Helvetica, Arial, Times, sans-serif;
@@ -24,18 +29,21 @@ h3{
     text-transform: uppercase;
 }
 h4{
-
+    font-family: "Roboto Mono", Helvetica, Arial, Times, sans-serif;
 }
 h5{
-
+    font-family: "Roboto Mono", Helvetica, Arial, Times, sans-serif;
 }
 h6{
-
+    font-family: "Roboto Mono", Helvetica, Arial, Times, sans-serif;
 }
 p{
     font-family: "Roboto Mono", Helvetica, Arial, Times, sans-serif;
     font-weight: 400;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
+}
+b, strong{
+    color: #333;
 }
 ul{
     li{
@@ -46,7 +54,7 @@ img{
     max-width: 100%;
 }
 .lead{
-    font-size: 2rem;
+    font-size: 1.75rem;
 }
 
 .btn{
@@ -59,7 +67,7 @@ img{
     color: $site_black;
     &:hover{
         color: #fff;
-        background-color: $site_black;
+        background-color: transparent;
         border-color: #fff;
     }
 }
@@ -73,49 +81,4 @@ img{
 }
 span.btn + span.btn{
     margin-left: 25px;
-}
-.main-content{
-    min-height: 100vh;
-    .container{
-        min-height: 100vh;
-    }
-    .secondary-header{
-        background-color: #fff;
-        min-height: 200px;
-        color: $site_black;
-        padding-top: 40px;
-        padding-bottom: 40px;
-        padding-right: 40px;
-        padding-left: calc((100% - 1200px)/2);
-        margin-bottom: 3rem;
-        @media (min-width: $sm){
-            width: 700px;
-        }
-        @media (min-width: $md){
-            width: 800px;
-        }
-        @media (min-width: $lg){
-            width: 1200px;
-        }
-        .col{
-
-        }
-        p{
-            color: $site_black;
-            margin-bottom: 0;
-        }
-    }
-}
-.container{
-    padding-left: calc((100% - 1200px)/2);
-    margin-left: 0;
-    @media (min-width: $sm){
-        width: 700px;
-    }
-    @media (min-width: $md){
-        width: 800px;
-    }
-    @media (min-width: $lg){
-        width: 1100px;
-    }
 }
