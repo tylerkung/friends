@@ -31,10 +31,6 @@ $(document).ready(function(){
     $('.home-grid .slide').first().addClass("active");
 })
 
-document.addEventListener("turbolinks:click", function() {
-  $('body').addClass('animate');
-});
-
 document.addEventListener("turbolinks:load", function() {
-  $('body').addClass('load');
+  $('h1, h2').addClass('animated fadeIn');
 });
