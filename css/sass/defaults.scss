@@ -1,4 +1,4 @@
-$site_black: #484c55;
+$site_black: #212121;
 $site_white: #eee;
 $sm: 768px;
 $md: 992px;
@@ -11,6 +11,7 @@ body{
     font-size: 18px;
     color: $site_white;
     line-height: 2;
+    font-family: "Roboto Mono", Helvetica, Arial, Times, sans-serif;
 }
 h1{
     font-family: "Press Start 2P", Helvetica, Arial, Times, serif;
@@ -22,6 +23,7 @@ h1{
 h2{
     font-family: "Press Start 2P", Helvetica, Arial, Times, serif;
     margin-bottom: 1.5rem;
+    color: #fff;
 }
 h3{
     font-family: "Roboto Mono", Helvetica, Arial, Times, sans-serif;
@@ -62,25 +64,31 @@ img{
     padding: 1rem 2rem;
 }
 .btn-primary{
-    background-color: #fff;
-    border-color: #fff;
+    background-color: $site_white;
+    border-color: $site_white;
     color: $site_black;
-    &:hover{
-        color: #fff;
-        background-color: transparent;
-        border-color: #fff;
+    &:hover, &:active{
+        color: $site_white !important;
+        background-color: transparent !important;
+        border-color: $site_white !important;
     }
 }
 .btn-secondary{
     background-color: transparent;
-    border-color: #fff;
-    &:hover{
-        background-color: $site_black;
-        border-color: #fff;
+    border-color: $site_white;
+    &:hover, &:active{
+        background-color: $site_black !important;
+        border-color: $site_white !important;
     }
 }
 span.btn + span.btn{
     margin-left: 25px;
+}
+a{
+    color: #fcf426;
+    &:hover{
+        color: #e8e245;
+    }
 }
 .page-trans{
     position: absolute;

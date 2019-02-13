@@ -1,7 +1,7 @@
 .main-content{
     position: relative;
     .secondary-header{
-        background-color: #fff;
+        background-color: $site_white;
         min-height: 200px;
         color: $site_black;
         padding-top: 40px;
@@ -63,7 +63,6 @@
         min-height: 900px;
         width: 100%;
         position: relative;
-        display: grid;
         grid-template-columns: repeat(16, 1fr);
         grid-template-rows: repeat(16, 1fr);
         .header-bg{
@@ -73,22 +72,63 @@
             background-repeat: no-repeat;
             background-position: center center;
         }
-    }
-    .header-text{
-        position: absolute;
-        left: 6.25%;
-        bottom: calc(18rem - 10px);
-        z-index: 10;
-        max-width: 1200px;
-        @media (min-width: 1800px){
-            left: 20%;
+        .header-text{
+            position: absolute;
+            left: 6.25%;
+            bottom: calc(18rem - 10px);
+            z-index: 10;
+            max-width: 1200px;
+            @media (min-width: 1800px){
+                left: 20%;
+            }
         }
     }
-    .container:first-of-type{
+    .secondary-header{
+        display: grid;
+        width: 100%;
+        position: relative;
+        grid-template-columns: repeat(16, 1fr);
+        grid-template-rows: repeat(16, 1fr);
+        height: 600px;
+        .header-bg{
+            grid-column: 2 / span 15;
+            grid-row: 1 / span 16;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+        .header-text{
+            position: absolute;
+            left: 6.25%;
+            z-index: 10;
+            bottom: calc(10rem - 10px);
+        }
+    }
+    .secondary-header + .main-content .container:first-of-type{
+        margin-top: -12rem;
+    }
+    .main-header + .main-content .container:first-of-type{
         margin-top: -20rem;
     }
 }
-
+.footer{
+    background-color: #2b2b2b;
+    padding: 3rem 6.25%;
+    margin-top: 5rem;
+    margin-right: 6.25%;
+    color: $site_white;
+    a{
+        color: $site_white;
+    }
+    .footer-nav{
+        margin-bottom: 0;
+        padding-left: 0;
+        list-style:none;
+    }
+    .row{
+        margin-bottom: 0;
+    }
+}
 .col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto{
     padding-right: 30px;
     padding-left: 30px;

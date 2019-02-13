@@ -14,13 +14,17 @@
             color: $site_black;
             font-size: 16px;
             .slide-left, .slide-right{
-                background-color: #fafafa;
+                background-color: $site_white;
                 width: 50%;
                 z-index: 10;
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 cursor: pointer;
+                transition: background-color 0.2s ease;
+                &:hover{
+                    background-color: #fff;
+                }
             }
             .slide-left{
                 border-right: 1px solid #e0e0e0;
@@ -167,6 +171,7 @@
                 border-left: 4px solid #fff;
                 margin-bottom: 40px;
                 line-height: 1.7;
+                color: #fff;
             }
         }
     }
