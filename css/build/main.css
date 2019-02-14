@@ -340,18 +340,16 @@ a:hover {
   grid-template-rows: repeat(16, 1fr);
 }
 .nav .logo-link {
-  grid-column: 1/span 1;
+  grid-column: 1/span 3;
   grid-row: 1/span 1;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   z-index: 13;
+  padding: 20px;
 }
-.nav .logo-link:before {
-  content: "";
-  height: 40px;
-  width: 40px;
-  background-color: #fff;
+.nav .logo-link .logo {
+  width: 70px;
 }
 .nav .menu {
   display: flex;
@@ -596,10 +594,10 @@ a:hover {
   margin-top: 5rem;
   margin-right: 6.25%;
   color: #eee;
-  background-image: url("http://tyler-kung.com/_Friends/img/friends-footer.png");
+  background-image: url("../../img/friends-footer.png");
   background-repeat: no-repeat;
   background-size: 600px;
-  background-position: 80% 50%;
+  background-position: 90% 50%;
 }
 .footer a {
   color: #eee;
