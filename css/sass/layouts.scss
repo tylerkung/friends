@@ -1,5 +1,6 @@
 .main-content{
     position: relative;
+    margin-right: 6.25%;
     .secondary-header{
         background-color: $site_white;
         min-height: 200px;
@@ -8,7 +9,7 @@
         padding-bottom: 40px;
         padding-right: 40px;
         padding-left: 6.25%;
-        margin-right: 20%;
+        margin-right: 13.75%;
         margin-bottom: 3rem;
         @media (min-width: 1800px){
             padding-left: 20%;
@@ -25,19 +26,19 @@
 }
 .container{
     background-color: #212121;
+    max-width: unset !important;
+    padding-top: 2rem;
+    padding-left: 6.25%;
+    padding-right: 6.25%;
     @media (min-width: $sm){
-        max-width: 700px;
-    }
-    @media (min-width: $md){
-        max-width: 800px;
+        padding-top: 5rem;
+        padding-left: 6.25%;
+        padding-right: 6.25%;
     }
     @media (min-width: $lg){
         max-width: unset !important;
         padding-top: 5rem;
-        padding-left: 6.25%;
-        padding-right: 8rem;
         margin: 0;
-        margin-right: 6.25%;
         width: auto;
     }
     @media (min-width: 1800px){
@@ -109,6 +110,9 @@
     }
     .main-header + .main-content .container:first-of-type{
         margin-top: -20rem;
+    }
+    .main-content{
+        // box-shadow: 10px -10px 20px 0px rgba(0,0,0,0.3);
     }
 }
 .footer{

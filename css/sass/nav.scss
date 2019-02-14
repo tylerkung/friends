@@ -13,12 +13,112 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        z-index: 11;
+        z-index: 13;
         &:before{
             content: '';
             height: 40px;
             width: 40px;
             background-color: #fff;
+        }
+    }
+    .menu{
+        display: flex;
+        grid-column: 14 / span 3;
+        grid-row: 1 / span 1;
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        z-index: 11;
+        .menu-button{
+            z-index: 12;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            flex-direction: column;
+            height: 30px;
+            cursor: pointer;
+        }
+        .bar{
+            background-color: $site_white;
+            position: relative;
+            height: 4px;
+            width: 40px;
+            margin-bottom: 6px;
+            transition: all 0.4s ease;
+            &:nth-child(2){
+                width: 30px;
+                // transition-delay: 0.1s;
+            }
+        }
+        &:not(.active) .menu-button:hover{
+            .bar{
+                width: 45px;
+                transition-duration: .2s;
+                &:nth-child(2){
+                    width: 33px;
+                }
+            }
+        }
+        &.active{
+            .bar{
+                margin: 0;
+                width: 30px !important;
+                transform: rotate(135deg);
+                transition: all 0.7s cubic-bezier(0,.9,.25,1);
+                &:nth-child(2){
+                    margin-top: -4px;
+                    transform: rotate(-135deg);
+                }
+            }
+            .menu-button:hover{
+                .bar{
+                    transform: rotate(145deg);
+                    &:nth-child(2){
+                        transform: rotate(-145deg);
+                    }
+                }
+            }
+            .menu-overlay{
+                transform: translateY(0%);
+                ul{
+                    li{
+                        transform: translateY(0px);
+                        opacity: 1;
+                        transition: all 0.35s ease;
+                        @for $i from 1 through 10{
+                            &:nth-child(#{$i}){
+                                transition-delay: 0.3s + (0.1s * $i);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .menu-overlay{
+            position: fixed;
+            height: 100vh;
+            width: 100%;
+            padding: 6.25%;
+            top: 0;
+            left: 0;
+            z-index: 10;
+            transform: translateY(-100%);
+            transition: all 0.5s cubic-bezier(.15,.6,.33,1);
+            background-color: rgba(0,0,0,0.93);
+            ul{
+                list-style: none;
+                a{
+                    color: $site_white;
+                }
+                li{
+                    opacity: 0;
+                    transform: translateY(10px);
+                    transition: all 0.2s ease;
+                    margin-bottom: 2rem;
+                }
+            }
         }
     }
 }

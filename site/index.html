@@ -23,10 +23,32 @@
 </head>
 
 <body class="secondary-template">
+    <div class="friends">
     <div class="nav">
         <a class="logo-link" href="/">
             <div class="logo"></div>
         </a>
+        <div class="menu" v-bind:class="{'active': menuOpen}">
+            <div class="menu-button" v-on:click="menuOpen = !menuOpen">
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <div class="menu-overlay">
+                <ul>
+                    <li class="menu-item m-level-1">
+                        <a href="#">
+                            <h4>Item 1 Level 1</h4>
+                        </a>
+                    </li>
+                    <li class="menu-item m-level-1">
+                        <a href="#">
+                            <h4>Item 2 Level 1</h4>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
     </div>
     <div class="main-header">
         <div class="header-bg" data-parallax="scroll" data-image-src="http://tyler-kung.com/_Friends/img/kaytranada.jpg" data-speed="0.8">
@@ -70,8 +92,6 @@
             </div>
         </div>
     </div>
-    <script src="../js/scripts.js"></script>
-    <div class="page-trans">
     </div>
 </body>
 <footer>
@@ -93,4 +113,5 @@
         </div>
     </div>
 </footer>
+<script src="../js/scripts.js"></script>
 </html>

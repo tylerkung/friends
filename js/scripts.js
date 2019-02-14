@@ -1,7 +1,7 @@
 var app = new Vue({
-    el: '.home-grid',
+    el: '.friends',
     data: {
-
+        menuOpen: false
     },
     methods: {
         nextSlide: function(){
@@ -23,6 +23,9 @@ var app = new Vue({
             else{
                 active.prev('.slide').addClass('active');
             }
+        },
+        activate: function(item){
+            console.log(item);
         }
     }
 })
