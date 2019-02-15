@@ -24,15 +24,54 @@
 
 <body class="home-template">
     <div class="friends">
-    <div class="nav">
-        <a class="logo-link" href="/">
-            <div class="logo"></div>
-        </a>
-        <div class="scroller"></div>
-    </div>
+        <div class="nav">
+            <a class="logo-link" href="/">
+                <div class="logo">
+                    <img src="img/friends-white.png">
+                </div>
+            </a>
+            <div class="menu" v-bind:class="{'active': menuOpen}">
+                <div class="menu-button" v-on:click="menuOpen = !menuOpen">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </div>
+            <div class="menu-overlay" v-bind:class="{'active': menuOpen}">
+                <div class="menu-wrapper">
+                    <ul>
+                        <li class="menu-item m-level-1">
+                            <a href="#">
+                                <h4>Item 1 Level 1</h4>
+                            </a>
+                        </li>
+                        <li class="menu-item m-level-1">
+                            <a href="#">
+                                <h4>Item 2 Level 1</h4>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="scroller"></div>
+        </div>
     <div class="home-grid">
         <div class="slideshow">
             <div class="slide slide-1">
+                <div class="slide-content">
+                    <h2>Friends</h2>
+                </div>
+                <div class="slide-image slide-image-1">
+                    <div class="image-container">
+                        <img src="img/friends-home.jpg">
+                    </div>
+                </div>
+                <div class="slide-image slide-image-2 slide-contain">
+                    <div class="image-container">
+                        <img src="img/friends-white.png">
+                    </div>
+                </div>
+            </div>
+            <div class="slide slide-2">
                 <div class="slide-content">
                     <h2>Childish Gambino</h2>
                     <p class="subtitle">Know The Ledge</p>
@@ -59,7 +98,7 @@
                 <div class="slide-image slide-image-4">
                 </div>
             </div>
-            <div class="slide slide-2">
+            <div class="slide slide-3">
                 <div class="slide-content">
                     <h2>John Mayer</h2>
                     <p class="subtitle">Inside the mind and closet of the rare garm-collecting musician.</p>
@@ -85,7 +124,7 @@
                 <div class="slide-image slide-image-4">
                 </div>
             </div>
-            <div class="slide slide-3">
+            <div class="slide slide-4">
                 <div class="slide-content">
                     <h2>Stephen Curry</h2>
                     <p class="subtitle">The Revenge of Stephen Curry, the Happy Warrior</p>

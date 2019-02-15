@@ -32,6 +32,9 @@ var app = new Vue({
 
 $(document).ready(function(){
     $('.home-grid .slide').first().addClass("active");
+    $('.nav .menu').click(function(){
+        $('body').toggleClass('menu-open');
+    });
     // $('[data-parallax="scroll"]').each(function(){
     //     $(this).parallax({
     //         imageSrc: $(this).attr('data-image-src'),

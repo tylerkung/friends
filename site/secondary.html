@@ -24,13 +24,37 @@
 
 <body class="secondary-template">
     <div class="friends">
-    <div class="nav">
-        <a class="logo-link" href="/">
-            <div class="logo"></div>
-        </a>
-    </div>
+        <div class="nav">
+            <a class="logo-link" href="/">
+                <div class="logo">
+                    <img src="../img/friends-white.png">
+                </div>
+            </a>
+            <div class="menu" v-bind:class="{'active': menuOpen}">
+                <div class="menu-button" v-on:click="menuOpen = !menuOpen">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </div>
+            <div class="menu-overlay" v-bind:class="{'active': menuOpen}">
+                <div class="menu-wrapper">
+                    <ul>
+                        <li class="menu-item m-level-1">
+                            <a href="#">
+                                <h4>Item 1 Level 1</h4>
+                            </a>
+                        </li>
+                        <li class="menu-item m-level-1">
+                            <a href="#">
+                                <h4>Item 2 Level 1</h4>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     <div class="secondary-header">
-        <div class="header-bg" data-parallax="scroll" data-image-src="http://tyler-kung.com/_Friends/img/kaytranada.jpg" data-speed="0.8">
+        <div class="header-bg" data-parallax="scroll" data-image-src="../img/friends-banner.jpg" data-speed="0.8">
         </div>
         <div class="header-text">
             <h1>Friends</h1>
@@ -43,6 +67,11 @@
                     <p class="">
                         Cras non augue hendrerit, commodo mauris vestibulum, dictum justo. In tristique hendrerit mi sed vestibulum. Etiam in urna scelerisque, tincidunt risus aliquam, dignissim urna. Nunc sit amet pulvinar est. Donec elit neque, fermentum ac metus quis, consectetur vulputate libero. Proin id elementum magna. Maecenas congue est porta sagittis hendrerit.
                     </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <iframe width="800" height="500" src="https://www.youtube.com/embed/MSADj4xbVhw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
         </div>

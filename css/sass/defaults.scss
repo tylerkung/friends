@@ -13,6 +13,10 @@ body{
     line-height: 2;
     font-family: "Roboto Mono", Helvetica, Arial, Times, sans-serif;
     overflow-x: hidden;
+    &.menu-open{
+        overflow: hidden;
+        height: 100vh;
+    }
 }
 h1{
     font-family: "Press Start 2P", Helvetica, Arial, Times, serif;
