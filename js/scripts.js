@@ -3,16 +3,14 @@ var menuApp = new Vue({
     data: {
         menuOpen: false
     },
-    methods:{
-        activate: function(item){
-            console.log(item);
-        }
-    }
 })
 
 var homeApp = new Vue({
     el: '.home-grid',
-    data:{},
+    data:{
+        sliderTime: 6000,
+        interval: '',
+    },
     methods: {
         nextSlide: function(){
             var active = $('.slide.active');
@@ -23,6 +21,8 @@ var homeApp = new Vue({
             else{
                 active.next('.slide').addClass('active');
             }
+            clearInterval(this.interval);
+            this.timerSet();
         },
         prevSlide: function(){
             var active = $('.slide.active');
@@ -33,12 +33,17 @@ var homeApp = new Vue({
             else{
                 active.prev('.slide').addClass('active');
             }
+            clearInterval(this.interval);
+            this.timerSet();
         },
+        timerSet: function(){
+            this.interval = setInterval(function(){
+                homeApp.nextSlide();
+            }.bind(this), this.sliderTime);
+        }
     },
     mounted: function(){
-        setInterval(function(){
-            homeApp.nextSlide();
-        }, 6000);
+        this.timerSet()
     }
 })
 
@@ -59,7 +64,7 @@ function loadAnimations(){
 
 $(document).ready(function(){
     $('.home-grid .slide').first().addClass("active");
-    $('.nav .menu').click(function(){
+    $('.nav .menu .menu-button').click(function(){
         $('body').toggleClass('menu-open');
     });
 

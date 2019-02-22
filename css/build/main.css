@@ -1,4 +1,4 @@
-/* sass --watch css/main.scss:css/build
+/* sass --watch css/main.scss:css/build/main.css
  * to compile
  */
 @import url("https://fonts.googleapis.com/css?family=Press+Start+2P|Roboto+Mono:300,300i,400,700");
@@ -447,6 +447,11 @@ a:hover {
   overflow: hidden;
   pointer-events: none;
 }
+@media (max-width: 768px) {
+  .nav .menu-overlay {
+    grid-column: 1/span 16;
+  }
+}
 .nav .menu-overlay .menu-wrapper {
   transform: translateX(-100%);
   transition: all 0.5s cubic-bezier(0.15, 0.6, 0.33, 1);
@@ -516,6 +521,7 @@ a:hover {
   display: flex;
   align-items: flex-start;
   justify-content: space-around;
+  min-height: 400px;
 }
 .nav .socials .site-title {
   transform: rotate(-180deg);
@@ -527,6 +533,11 @@ a:hover {
 .nav .socials .social-icons a {
   color: #fff;
   font-size: 1.2em;
+}
+@media (max-width: 768px) {
+  .nav .socials {
+    display: none;
+  }
 }
 
 .main-content {
@@ -692,8 +703,6 @@ a:hover {
 .shadow-image {
   position: relative;
   z-index: 1;
-  transform: translate(20px, 20px);
-  transition: transform 1s ease;
 }
 .shadow-image:before {
   content: "";
@@ -704,7 +713,13 @@ a:hover {
   background-color: #1d1c1c;
   height: 100%;
   width: 80%;
+}
+.shadow-image:before.aniamte {
   transform: translate(-30px, -30px);
+  transition: transform 1s ease;
+}
+.shadow-image.animate {
+  transform: translate(20px, 20px);
   transition: transform 1s ease;
 }
 .shadow-image.white:before {
