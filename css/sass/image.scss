@@ -8,3 +8,33 @@
         object-position: center;
     }
 }
+
+.shadow-image{
+    position: relative;
+    z-index: 1;
+    transform: translate(20px, 20px);
+    transition: transform 1s ease;
+    &:before{
+        content: '';
+        position: absolute;
+        z-index: -1;
+        top: 30px;
+        right: -30px;
+        background-color: #1d1c1c;
+
+        height: 100%;
+        width: 80%;
+        transform: translate(-30px, -30px);
+        transition: transform 1s ease;
+    }
+    &.white{
+        &:before{
+            background-color: $site_white;
+        }
+    }
+    &.reveal{
+        &, &:before{
+            transform: translate(0, 0);
+        }
+    }
+}

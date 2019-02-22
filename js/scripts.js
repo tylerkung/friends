@@ -1,8 +1,18 @@
-var app = new Vue({
-    el: '.friends',
+var menuApp = new Vue({
+    el: '.nav',
     data: {
         menuOpen: false
     },
+    methods:{
+        activate: function(item){
+            console.log(item);
+        }
+    }
+})
+
+var homeApp = new Vue({
+    el: '.home-grid',
+    data:{},
     methods: {
         nextSlide: function(){
             var active = $('.slide.active');
@@ -24,17 +34,36 @@ var app = new Vue({
                 active.prev('.slide').addClass('active');
             }
         },
-        activate: function(item){
-            console.log(item);
-        }
+    },
+    mounted: function(){
+        setInterval(function(){
+            homeApp.nextSlide();
+        }, 6000);
     }
 })
+
+function loadAnimations(){
+    var controller = new ScrollMagic.Controller({});
+
+    $('.animate').each(function(){
+        new ScrollMagic.Scene({
+            triggerElement: this,
+        })
+        .setClassToggle(this, 'reveal')
+        // .addIndicators()
+        .offset(-80)
+        .reverse(false)
+        .addTo(controller);
+    })
+}
 
 $(document).ready(function(){
     $('.home-grid .slide').first().addClass("active");
     $('.nav .menu').click(function(){
         $('body').toggleClass('menu-open');
     });
+
+    loadAnimations();
     // $('[data-parallax="scroll"]').each(function(){
     //     $(this).parallax({
     //         imageSrc: $(this).attr('data-image-src'),

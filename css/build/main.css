@@ -1,4 +1,4 @@
-/* sass --watch css/sass/main.scss:css/build
+/* sass --watch css/main.scss:css/build
  * to compile
  */
 @import url("https://fonts.googleapis.com/css?family=Press+Start+2P|Roboto+Mono:300,300i,400,700");
@@ -146,10 +146,13 @@ a:hover {
 }
 .home-grid .slideshow .slide-controls {
   grid-column: 7/span 2;
-  grid-row: 12/span 2;
+  grid-row: 15/span 1;
   display: flex;
   color: #212121;
   font-size: 16px;
+  opacity: 0;
+  transition: opacity 0.4s 0.8s ease;
+  z-index: 10;
 }
 .home-grid .slideshow .slide-controls .slide-left, .home-grid .slideshow .slide-controls .slide-right {
   background-color: #eee;
@@ -161,11 +164,23 @@ a:hover {
   cursor: pointer;
   transition: background-color 0.2s ease;
 }
+.home-grid .slideshow .slide-controls .slide-left i, .home-grid .slideshow .slide-controls .slide-right i {
+  transition: transform 0.2s ease;
+}
 .home-grid .slideshow .slide-controls .slide-left:hover, .home-grid .slideshow .slide-controls .slide-right:hover {
   background-color: #fff;
 }
+.home-grid .slideshow .slide-controls .slide-left:hover i, .home-grid .slideshow .slide-controls .slide-right:hover i {
+  transform: translateX(3px);
+}
 .home-grid .slideshow .slide-controls .slide-left {
   border-right: 1px solid #e0e0e0;
+}
+.home-grid .slideshow .slide-controls .slide-left:hover i {
+  transform: translateX(-3px);
+}
+.home-grid .slideshow.reveal .slide-controls {
+  opacity: 1;
 }
 .home-grid .slide {
   display: grid;
@@ -178,7 +193,7 @@ a:hover {
 .home-grid .slide .image-container {
   height: 100%;
   width: 100%;
-  transition: transform 0.5s ease;
+  transition: transform 0.7s ease;
   transform: translateX(0%);
   overflow: hidden;
 }
@@ -190,7 +205,7 @@ a:hover {
   width: 100%;
   object-fit: cover;
   object-position: center;
-  transition: transform 0.5s ease;
+  transition: transform 0.7s ease;
   transform: translateX(0%);
 }
 .home-grid .slide .slide-image.slide-contain img {
@@ -492,6 +507,27 @@ a:hover {
 .nav .menu-overlay.active ul li:nth-child(10) {
   transition-delay: 1.3s;
 }
+.nav .socials {
+  z-index: 10;
+  grid-column: 16/span 1;
+  grid-row: 6/span 5;
+  writing-mode: vertical-rl;
+  padding: 1rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+.nav .socials .site-title {
+  transform: rotate(-180deg);
+  margin-right: 5px;
+}
+.nav .socials .social-icons i {
+  padding-bottom: 1rem;
+}
+.nav .socials .social-icons a {
+  color: #fff;
+  font-size: 1.2em;
+}
 
 .main-content {
   position: relative;
@@ -651,6 +687,31 @@ a:hover {
   width: 100%;
   height: 100%;
   object-position: center;
+}
+
+.shadow-image {
+  position: relative;
+  z-index: 1;
+  transform: translate(20px, 20px);
+  transition: transform 1s ease;
+}
+.shadow-image:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 30px;
+  right: -30px;
+  background-color: #1d1c1c;
+  height: 100%;
+  width: 80%;
+  transform: translate(-30px, -30px);
+  transition: transform 1s ease;
+}
+.shadow-image.white:before {
+  background-color: #eee;
+}
+.shadow-image.reveal, .shadow-image.reveal:before {
+  transform: translate(0, 0);
 }
 
 /*!

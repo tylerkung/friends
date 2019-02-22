@@ -125,4 +125,27 @@
             }
         }
     }
+    .socials{
+        z-index: 10;
+        grid-column: 16 / span 1;
+        grid-row: 6 / span 5;
+        writing-mode: vertical-rl;
+        padding: 1rem;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-around;
+        .site-title{
+            transform:rotate(-180deg);
+            margin-right: 5px;
+        }
+        .social-icons{
+            i{
+                padding-bottom: 1rem;
+            }
+            a{
+                color: #fff;
+                font-size: 1.2em;
+            }
+        }
+    }
 }
