@@ -714,12 +714,12 @@ a:hover {
   height: 100%;
   width: 80%;
 }
-.shadow-image:before.aniamte {
-  transform: translate(-30px, -30px);
-  transition: transform 1s ease;
-}
 .shadow-image.animate {
   transform: translate(20px, 20px);
+  transition: transform 1s ease;
+}
+.shadow-image.animate:before {
+  transform: translate(-30px, -30px);
   transition: transform 1s ease;
 }
 .shadow-image.white:before {
