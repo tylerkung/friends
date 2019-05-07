@@ -1,0 +1,22 @@
+.footer{
+    background-color: #2b2b2b;
+    padding: 3rem 6.25%;
+    margin-top: 5rem;
+    margin-right: 6.25%;
+    color: #eee;
+    background-image: url('../../img/friends-footer.png');
+    background-repeat: no-repeat;
+    background-size: 600px;
+    background-position: 90% 50%;
+    a{
+        color: #eee;
+    }
+    .footer-nav{
+        margin-bottom: 0;
+        padding-left: 0;
+        list-style:none;
+    }
+    .row{
+        margin-bottom: 0;
+    }
+}
