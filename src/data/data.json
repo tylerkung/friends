@@ -8,46 +8,35 @@
 		"meta-description": "description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi qui cum vitae suscipit voluptatem, alias ea facilis quae magnam ut rerum dolorum. Sint deserunt esse, debitis blanditiis modi ipsam laudantium?",
 		"title": "1-title Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem voluptate nulla mollitia quis, aspernatur eum neque, quasi! Omnis corporis modi quia, obcaecati, aut atque! Odio facilis quisquam maxime tempore iure!"
 	},
+   "brand":{
+	   	"logo": "/dist/img/friends-white.png"
+   },
    "navigation":[
       {
-         "title":"About",
-         "link":"/about",
-         "subnav": [
-         	  {
-			     "title":"Article",
-			     "link":"/about/article"
-		      },
-		      {
-		         "title":"Callback",
-		         "link":"/about/callback"
-		      }
-         ]
+		  "title":"Home",
+          "link":"/dist"
       },
+	  {
+         "title":"Shows",
+         "link":"/dist/shows"
+	  },
       {
-         "title":"Promotion",
-         "link":"/promotion"
+		  "title":"About",
+          "link":"/dist/about"
       },
-      {
-         "title":"News",
-         "link":"/news"
-      },
-      {
-         "title":"Blog",
-         "link":"/blog"
-      },
-      {
-         "title":"Contacts",
-         "link":"/contacts"
-      }
+	  {
+         "title":"Media",
+         "link":"/dist/media"
+	  },
+	  {
+         "title":"Contact",
+         "link":"/dist/contact"
+	  },
   ],
   "footer-navigation":[
 	 {
 		"title":"Contact",
-		"link":"/contact"
-	 },
-	 {
-		"title":"Shows",
-		"link":"/shows"
+		"link":"/dist/contact"
 	 },
 	 {
 		"socials":[
@@ -57,9 +46,19 @@
 				"link": "#twitter"
 			},
 			{
+				"title": "Facebook",
+				"icon": "fa-facebook",
+				"link": "#facebook"
+			},
+			{
 				"title": "Instagram",
 				"icon": "fa-instagram",
 				"link": "#instagram"
+			},
+			{
+				"title": "Soundcloud",
+				"icon": "fa-soundcloud",
+				"link": "#soundcloud"
 			}
 		]
 	}

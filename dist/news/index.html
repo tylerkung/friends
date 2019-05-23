@@ -14,18 +14,20 @@
 	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<title>Friends</title>
 		<link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
-		<link rel="stylesheet" type="text/css" href="/styles/all.css" />
+		<!-- <link rel="stylesheet" type="text/css" href="/styles/all.css" /> -->
 		
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-		<link rel="stylesheet" type="text/css" href="/dist/styles/all.css" />
-		<script src="js/parallax.min.js"></script>
+		<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous"> -->
+		<link rel="stylesheet" href="/dist/includes/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="/dist/styles/all.css">
+		<script src="/dist/includes/parallax.min.js"></script>
+		<script src="/dist/includes/vue.js"></script>
+		<script src="/dist/includes/bootstrap.min.js"></script>
+		<script src="/dist/includes/jquery-3.4.1.min.js"></script>
+		<script src="/dist/includes/scrollmagic.min.js"></script>
+		<script src="/dist/includes/debug.addIndicators.min.js"></script>
 		<!-- <script src="js/turbolinks.js"></script> -->
-		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/debug.addIndicators.min.js"></script>
+		
 		<link href="https://fonts.googleapis.com/css?family=Press+Start+2P|Roboto+Mono" rel="stylesheet">
 		<link href="" rel="shortcut icon">
 	</head>
@@ -50,40 +52,126 @@
        			</div>
        
        			<div class="subheader__nav">
-       				<ul class="nav">
-       						<li class="nav__item"><a href="/about" class="text__nav nav__link">About</a>
-       				                <ul class="nav__sub">
-       				                       <li><a href="/about/article" class="text__geo">Article</a></li>
-       				                       <li><a href="/about/callback" class="text__geo">Callback</a></li>
-       				                </ul>
-       				        </li>
-       						<li class="nav__item"><a href="/promotion" class="text__nav nav__link">Promotion</a>
-       				        </li>
-       						<li class="nav__item"><a href="/news" class="text__nav nav__link">News</a>
-       				        </li>
-       						<li class="nav__item"><a href="/blog" class="text__nav nav__link">Blog</a>
-       				        </li>
-       						<li class="nav__item"><a href="/contacts" class="text__nav nav__link">Contacts</a>
-       				        </li>
-       				</ul>			</div>
+       				<div class="nav">
+       					<a class="logo-link" href="/">
+       						<div class="logo">
+       							<img src="/dist/img/friends-white.png">
+       						</div>
+       					</a>
+       					<div class="menu" v-bind:class="{'active': menuOpen}">
+       						<div class="menu-button" v-on:click="menuOpen = !menuOpen">
+       							<div class="bar"></div>
+       							<div class="bar"></div>
+       						</div>
+       					</div>
+       					<div class="menu-overlay" v-bind:class="{'active': menuOpen}">
+       						<div class="menu-wrapper">
+       							<ul>
+       									<li class="menu-item m-level-1">
+       										<a href="/dist" class="">
+       											<h4>Home</h4>
+       										</a>
+       							        </li>
+       									<li class="menu-item m-level-1">
+       										<a href="/dist/shows" class="">
+       											<h4>Shows</h4>
+       										</a>
+       							        </li>
+       									<li class="menu-item m-level-1">
+       										<a href="/dist/about" class="">
+       											<h4>About</h4>
+       										</a>
+       							        </li>
+       									<li class="menu-item m-level-1">
+       										<a href="/dist/media" class="">
+       											<h4>Media</h4>
+       										</a>
+       							        </li>
+       									<li class="menu-item m-level-1">
+       										<a href="/dist/contact" class="">
+       											<h4>Contact</h4>
+       										</a>
+       							        </li>
+       									<li class="menu-item m-level-1">
+       										<a href="/kaytranada" class="">
+       											<h4>Kaytranada</h4>
+       										</a>
+       							        </li>
+       							</ul>
+       						</div>
+       					</div>
+       					<div class="socials">
+       						<div class="site-title">FRIENDS</div>
+       						<div class="social-icons">
+       							<span><a href="#"><i class="fab fa-twitter"></i></a></span>
+       							<span><a href="#"><i class="fab fa-facebook"></i></a></span>
+       							<span><a href="#"><i class="fab fa-instagram"></i></a></span>
+       							<span><a href="#"><i class="fab fa-soundcloud"></i></a></span>
+       						</div>
+       					</div>
+       				</div>
+       			</div>
        			<div class="btn__mobile btn__mobile-menu"><span></span></div>
        			<div class="mobile">
-       				<ul class="nav">
-       						<li class="nav__item"><a href="/about" class="text__nav nav__link">About</a>
-       				                <ul class="nav__sub">
-       				                       <li><a href="/about/article" class="text__geo">Article</a></li>
-       				                       <li><a href="/about/callback" class="text__geo">Callback</a></li>
-       				                </ul>
-       				        </li>
-       						<li class="nav__item"><a href="/promotion" class="text__nav nav__link">Promotion</a>
-       				        </li>
-       						<li class="nav__item"><a href="/news" class="text__nav nav__link">News</a>
-       				        </li>
-       						<li class="nav__item"><a href="/blog" class="text__nav nav__link">Blog</a>
-       				        </li>
-       						<li class="nav__item"><a href="/contacts" class="text__nav nav__link">Contacts</a>
-       				        </li>
-       				</ul>			</div>
+       				<div class="nav">
+       					<a class="logo-link" href="/">
+       						<div class="logo">
+       							<img src="/dist/img/friends-white.png">
+       						</div>
+       					</a>
+       					<div class="menu" v-bind:class="{'active': menuOpen}">
+       						<div class="menu-button" v-on:click="menuOpen = !menuOpen">
+       							<div class="bar"></div>
+       							<div class="bar"></div>
+       						</div>
+       					</div>
+       					<div class="menu-overlay" v-bind:class="{'active': menuOpen}">
+       						<div class="menu-wrapper">
+       							<ul>
+       									<li class="menu-item m-level-1">
+       										<a href="/dist" class="">
+       											<h4>Home</h4>
+       										</a>
+       							        </li>
+       									<li class="menu-item m-level-1">
+       										<a href="/dist/shows" class="">
+       											<h4>Shows</h4>
+       										</a>
+       							        </li>
+       									<li class="menu-item m-level-1">
+       										<a href="/dist/about" class="">
+       											<h4>About</h4>
+       										</a>
+       							        </li>
+       									<li class="menu-item m-level-1">
+       										<a href="/dist/media" class="">
+       											<h4>Media</h4>
+       										</a>
+       							        </li>
+       									<li class="menu-item m-level-1">
+       										<a href="/dist/contact" class="">
+       											<h4>Contact</h4>
+       										</a>
+       							        </li>
+       									<li class="menu-item m-level-1">
+       										<a href="/kaytranada" class="">
+       											<h4>Kaytranada</h4>
+       										</a>
+       							        </li>
+       							</ul>
+       						</div>
+       					</div>
+       					<div class="socials">
+       						<div class="site-title">FRIENDS</div>
+       						<div class="social-icons">
+       							<span><a href="#"><i class="fab fa-twitter"></i></a></span>
+       							<span><a href="#"><i class="fab fa-facebook"></i></a></span>
+       							<span><a href="#"><i class="fab fa-instagram"></i></a></span>
+       							<span><a href="#"><i class="fab fa-soundcloud"></i></a></span>
+       						</div>
+       					</div>
+       				</div>
+       			</div>
        		</div>
        	</div>
        </div>
@@ -91,14 +179,15 @@
 		       <div class="footer">
 		           <div class="row">
 		               <div class="col-sm-6">
-		                   <h3>Footer</h3>
+		                   <h3>FRIENDS</h3>
 		                   <ul class="footer-nav">
-		   						<li><a href="/contact">Contact</a></li>
-		   						<li><a href="/shows">Shows</a></li>
+		   						<li><a href="/dist/contact">Contact</a></li>
 		   						<li><a href=""></a></li>
 		   							<li class="socials">
 		   									<span><a href="#twitter"><i class="fab fa-twitter"></i></a></span>
+		   									<span><a href="#facebook"><i class="fab fa-facebook"></i></a></span>
 		   									<span><a href="#instagram"><i class="fab fa-instagram"></i></a></span>
+		   									<span><a href="#soundcloud"><i class="fab fa-soundcloud"></i></a></span>
 		   							</li>
 		                       <li>Footer 2019</li>
 		                   </ul>

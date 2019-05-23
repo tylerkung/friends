@@ -43,6 +43,12 @@ gulp.task('img', function() {
 	.pipe(gulp.dest('dist/img'));
 });
 
+gulp.task('includes', function() {
+	return gulp.src('src/assets/includes/**', {since: gulp.lastRun('includes')})
+	.pipe(newer('dist/includes'))
+	.pipe(gulp.dest('dist/includes'));
+});
+
 gulp.task('fonts', function() {
 	return gulp.src('src/assets/fonts/**', {since: gulp.lastRun('fonts')})
 	.pipe(newer('dist/fonts'))
@@ -83,7 +89,7 @@ gulp.task('handlebars', function () {
 });
 
 gulp.task('build', gulp.series(
-	'clean', gulp.parallel('styles', 'img', 'fonts', 'lib', 'js', 'handlebars'))
+	'clean', gulp.parallel('styles', 'img', 'includes', 'fonts', 'lib', 'js', 'handlebars'))
 );
 
 gulp.task('watch', function() {
@@ -91,6 +97,7 @@ gulp.task('watch', function() {
 	gulp.watch('src/assets/styles/**/*.scss', gulp.series('styles'));
 	gulp.watch('src/assets/fonts/*.*', gulp.series('fonts'));
 	gulp.watch('src/assets/img/**', gulp.series('img'));
+	gulp.watch('src/assets/includes/**', gulp.series('includes'));
 	gulp.watch('src/templates/**/*.hbs', gulp.series('handlebars'));
 	gulp.watch('src/partials/*.hbs', gulp.series('handlebars'));
 	gulp.watch('src/data/data.json', gulp.series('handlebars'));
