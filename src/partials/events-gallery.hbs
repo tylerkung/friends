@@ -1,0 +1,62 @@
+<div class="gallery event-gallery">
+    <div class="gallery-list">
+        <div v-for="(item, index) in gallery" class="gallery-list-item" @click="setActive(index)" :class="{'active': index == activeIndex}">
+            <!-- {{#if title}}
+                <div class="g-item-title">
+                    {{title}}
+                </div>
+            {{/if}} -->
+                <div class="g-item-image">
+                    <img :src="item['image-1']"/>
+                </div>
+            <!-- {{#if description}}
+                <div class="g-item-description">
+                    {{description}}
+                </div>
+            {{/if}} -->
+            <!-- {{#if link}}
+                <div class="g-item-link">
+                    {{link}}
+                </div>
+            {{/if}} -->
+        </div>
+    </div>
+    <div class="gallery-main">
+        <div class="gallery-main-item">
+            <img :src="activeImage">
+        </div>
+    </div>
+</div>
+
+<script type="module">
+import data from '/dist/data/data.js';
+
+var eventsApp = new Vue({
+    delimiters: ['${', '}'],
+    el: '.gallery',
+    data: {
+        gallery: data.data,
+        classes: "event-gallery",
+        activeIndex: 0,
+        activeImage: '',
+        activeItem: ''
+    },
+    computed: {
+    },
+    methods: {
+        setActive: function(i){
+            this.activeIndex = i;
+            this.activeItem = this.gallery[i];
+            this.activeImage = this.gallery[i]['image-1'];
+        }
+    },
+    beforeMount: function(){
+    },
+    mounted: function(){
+    }
+})
+
+$(document).ready(function(){
+    eventsApp.setActive(0);
+})
+</script>

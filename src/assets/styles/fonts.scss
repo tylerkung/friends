@@ -1,4 +1,29 @@
-@import url('https://fonts.googleapis.com/css?family=Press+Start+2P|Roboto+Mono:300,300i,400,700');
+@font-face{
+    font-family: "Press Start 2P";
+    src: url('/dist/includes/PressStart2P-Regular.ttf');
+    font-weight: 400;
+}
+@font-face{
+    font-family: "Roboto Mono";
+    src: url('/dist/includes/RobotoMono-Regular.ttf');
+    font-weight: 400;
+}
+@font-face{
+    font-family: "Roboto Mono";
+    src: url('/dist/includes/RobotoMono-Light.ttf');
+    font-weight: 300;
+}
+@font-face{
+    font-family: "Roboto Mono";
+    src: url('/dist/includes/RobotoMono-LightItalic.ttf');
+    font-weight: 300;
+    font-style: italic;
+}
+@font-face{
+    font-family: "Roboto Mono";
+    src: url('/dist/includes/RobotoMono-Bold.ttf');
+    font-weight: 700;
+}
 body{
 h1{
     font-family: "Press Start 2P", Helvetica, Arial, Times, serif;

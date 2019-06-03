@@ -1,4 +1,13 @@
 .main-header{
     padding-left: 6.25%;
     padding-right: 6.25%;
+    @media (min-width: 1800px){
+        padding-left: 20%;
+    }
+    @media (max-width: 1799px){
+        h1{
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+    }
 }
