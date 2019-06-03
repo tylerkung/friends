@@ -141,6 +141,7 @@
         align-items: flex-start;
         justify-content: space-around;
         min-height: 400px;
+        pointer-events: all;
         .site-title{
             transform:rotate(-180deg);
             margin-right: 5px;

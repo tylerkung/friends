@@ -1,6 +1,7 @@
 .gallery{
     display: flex;
     align-items: flex-start;
+    margin-top: 5em;
     &.event-gallery{
         .gallery-list{
             width: 40%;
@@ -52,7 +53,13 @@
             }
         }
         @media (max-width: 767px){
-            flex-direction: row-reverse;
+            flex-direction: column-reverse;
+            .gallery-list{
+                width: 100%;
+            }
+            .gallery-main{
+                width: 100%;
+            }
         }
     }
 }
