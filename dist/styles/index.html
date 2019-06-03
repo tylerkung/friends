@@ -12,8 +12,6 @@
       <meta name="description" content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero qui accusamus quibusdam, eum vero placeat soluta deleniti enim laborum. Aspernatur fugiat ea ad, dolores atque, distinctio sunt iure accusamus sint!" />
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   	<title>Friends</title>
-  	<base href="/dist/">
-  	
   	<link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
   	<!-- <link rel="stylesheet" type="text/css" href="/styles/all.css" /> -->
   	
@@ -21,14 +19,14 @@
   	<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous"> -->
   	
   	<link rel="stylesheet" href="/includes/bootstrap.css">
-  	<link rel="stylesheet" type="text/css" href="styles/all.css">
+  	<link rel="stylesheet" type="text/css" href="/styles/all.css">
   	
-  	<script src="includes/jquery-3.4.1.min.js"></script>
-  	<script src="includes/parallax.min.js"></script>
-  	<script src="includes/vue.js"></script>
-  	<script src="includes/bootstrap.min.js"></script>
-  	<script src="includes/scrollmagic.min.js"></script>
-  	<script src="includes/debug.addIndicators.min.js"></script>
+  	<script src="/includes/jquery-3.4.1.min.js"></script>
+  	<script src="/includes/parallax.min.js"></script>
+  	<script src="/includes/vue.js"></script>
+  	<script src="/includes/bootstrap.min.js"></script>
+  	<script src="/includes/scrollmagic.min.js"></script>
+  	<script src="/includes/debug.addIndicators.min.js"></script>
   	<!-- <script src="js/turbolinks.js"></script> -->
   	
   	<link href="https://fonts.googleapis.com/css?family=Press+Start+2P|Roboto+Mono" rel="stylesheet">
@@ -36,9 +34,9 @@
   </head>
   <body class="">
       <div class="nav">
-      	<a class="logo-link" href="/dist">
+      	<a class="logo-link" href="/">
       		<div class="logo">
-      			<img src="/dist/img/friends-white.png">
+      			<img src="/img/friends-white.png">
       		</div>
       	</a>
       	<div class="menu" v-bind:class="{'active': menuOpen}">
@@ -51,27 +49,27 @@
       		<div class="menu-wrapper">
       			<ul>
       					<li class="menu-item m-level-1">
-      						<a href="/dist" class="">
+      						<a href="/" class="">
       							<h4>Home</h4>
       						</a>
       			        </li>
       					<li class="menu-item m-level-1">
-      						<a href="/dist/events" class="">
+      						<a href="/events" class="">
       							<h4>Events</h4>
       						</a>
       			        </li>
       					<li class="menu-item m-level-1">
-      						<a href="/dist/about" class="">
+      						<a href="/about" class="">
       							<h4>About</h4>
       						</a>
       			        </li>
       					<li class="menu-item m-level-1">
-      						<a href="/dist/media" class="">
+      						<a href="/media" class="">
       							<h4>Media</h4>
       						</a>
       			        </li>
       					<li class="menu-item m-level-1">
-      						<a href="/dist/contact" class="">
+      						<a href="/contact" class="">
       							<h4>Contact</h4>
       						</a>
       			        </li>
@@ -132,7 +130,7 @@
                  <div class="col-sm-6">
                      <h3>FRIENDS</h3>
                      <ul class="footer-nav">
-     						<li><a href="/dist/contact">Contact</a></li>
+     						<li><a href="/contact">Contact</a></li>
      						<li><a href=""></a></li>
      							<li class="socials">
      									<span><a href="#twitter"><i class="fab fa-twitter"></i></a></span>
@@ -146,6 +144,6 @@
              </div>
          </div>
      </footer>
-     <script src="/dist/scripts/all.js"></script>
+     <script src="/scripts/all.js"></script>
   </body>
 </html>

@@ -9,34 +9,34 @@
 		"title": "1-title Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem voluptate nulla mollitia quis, aspernatur eum neque, quasi! Omnis corporis modi quia, obcaecati, aut atque! Odio facilis quisquam maxime tempore iure!"
 	},
    "brand":{
-	   	"logo": "/dist/img/friends-white.png"
+	   	"logo": "/img/friends-white.png"
    },
    "navigation":[
       {
 		  "title":"Home",
-          "link":"/dist"
+          "link":"/"
       },
 	  {
          "title":"Events",
-         "link":"/dist/events"
+         "link":"/events"
 	  },
       {
 		  "title":"About",
-          "link":"/dist/about"
+          "link":"/about"
       },
 	  {
          "title":"Media",
-         "link":"/dist/media"
+         "link":"/media"
 	  },
 	  {
          "title":"Contact",
-         "link":"/dist/contact"
+         "link":"/contact"
 	  }
   ],
   "footer-navigation":[
 	 {
 		"title":"Contact",
-		"link":"/dist/contact"
+		"link":"/contact"
 	 },
 	 {
 		"socials":[
