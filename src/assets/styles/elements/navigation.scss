@@ -157,7 +157,10 @@
             }
         }
         @media (max-width: 768px){
-            display: none;
+            padding: 0;
+            .social-icons{
+                display: none;
+            }
         }
     }
 }
