@@ -31,7 +31,7 @@
             transition: transform 1s ease;
         }
     }
-    &.white{ 
+    &.white{
         &:before{
             background-color: #eee;
         }
@@ -41,4 +41,66 @@
             transform: translate(0, 0);
         }
     }
+}
+@mixin gridImgColor($color){
+    background: linear-gradient(-90deg, $color 1px, transparent 1px),
+    linear-gradient($color 1px, transparent 1px),
+    linear-gradient(-90deg, $color 1px, transparent 1px),
+    linear-gradient($color 1px, transparent 1px),
+    linear-gradient(transparent 3px, transparent 3px, transparent 78px, transparent 78px),
+    linear-gradient(-90deg, transparent 1px, transparent 1px),
+    linear-gradient(-90deg, transparent 3px, transparent 3px, transparent 78px, transparent 78px),
+    linear-gradient(transparent 1px, transparent 1px), transparent;
+    background-size:
+        15px 15px,
+        15px 15px,
+        15px 15px,
+        15px 15px,
+        15px 15px,
+        15px 15px,
+        15px 15px,
+        15px 15px;
+    background-position: center center;
+}
+
+.grid-image{
+    position: relative;
+    z-index: 1;
+    &:before{
+        content: '';
+        position: absolute;
+        z-index: -1;
+        top: 30px;
+        right: -30px;
+        background:
+            linear-gradient(-90deg, #00ff41 1px, transparent 1px),
+            linear-gradient(#00ff41 1px, transparent 1px),
+            linear-gradient(-90deg, #00ff41 1px, transparent 1px),
+            linear-gradient(#00ff41 1px, transparent 1px),
+            linear-gradient(transparent 3px, transparent 3px, transparent 78px, transparent 78px),
+            linear-gradient(-90deg, transparent 1px, transparent 1px),
+            linear-gradient(-90deg, transparent 3px, transparent 3px, transparent 78px, transparent 78px),
+            linear-gradient(transparent 1px, transparent 1px), transparent;
+        background-size:
+            15px 15px,
+            15px 15px,
+            15px 15px,
+            15px 15px,
+            15px 15px,
+            15px 15px,
+            15px 15px,
+            15px 15px;
+        background-position: center center;
+        height: 100%;
+        width: 80%;
+    }
+    &.red:before{
+        @include gridImgColor(red);
+    }
+    &.white:before{
+        @include gridImgColor(white);   
+    }
+}
+
+body {
 }

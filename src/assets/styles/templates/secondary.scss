@@ -25,6 +25,9 @@
             @media (min-width: 1800px){
                 left: 20%;
             }
+            @media (max-width: 767px){
+                bottom: calc(18rem - 3px);
+            }
         }
     }
     .secondary-header{

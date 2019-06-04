@@ -16,6 +16,7 @@ body {
   font-family: "Roboto Mono", Helvetica, Arial, Times, sans-serif;
   overflow-x: hidden;
   padding-top: 150px;
+  width: 100%;
   &.menu-open{
       overflow: hidden;
       height: 100vh;
