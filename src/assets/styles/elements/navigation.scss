@@ -158,6 +158,7 @@
         }
         @media (max-width: 768px){
             padding: 0;
+            grid-row: 2 / span 14; 
             .social-icons{
                 display: none;
             }
