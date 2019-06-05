@@ -43,22 +43,22 @@
 			{
 				"title": "Twitter",
 				"icon": "fa-twitter",
-				"link": "#twitter"
+				"link": "https://twitter.com/wooitsmike"
 			},
 			{
 				"title": "Facebook",
 				"icon": "fa-facebook",
-				"link": "#facebook"
+				"link": "https://www.facebook.com/friendssfevents/"
 			},
 			{
 				"title": "Instagram",
 				"icon": "fa-instagram",
-				"link": "#instagram"
+				"link": "https://www.instagram.com/friendssf_/"
 			},
 			{
 				"title": "Soundcloud",
 				"icon": "fa-soundcloud",
-				"link": "#soundcloud"
+				"link": "https://soundcloud.com/friends_sf"
 			}
 		]
 	}

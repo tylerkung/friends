@@ -9,6 +9,9 @@
         grid-template-columns: repeat(16, 1fr);
         grid-template-rows: repeat(16, 1fr);
         padding: 0;
+        @media (max-width: 767px){
+            min-height: 600px;
+        }
         .header-bg{
             grid-column: 2 / span 15;
             grid-row: 1 / span 16;
@@ -41,6 +44,12 @@
             max-width: 1200px;
             @media (min-width: 1800px){
                 left: 20%;
+            }
+            @media (min-width: 1200px){
+                h1{
+                    font-size: 8rem;
+                }
+                bottom: calc(18rem - 20px);
             }
             @media (max-width: 767px){
                 bottom: calc(18rem - 3px);

@@ -18,7 +18,7 @@ body {
   padding-top: 150px;
   width: 100%;
   &.menu-open{
-      overflow: hidden;
+      position: fixed;
       height: 100vh;
   }
 }

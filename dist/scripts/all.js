@@ -57,6 +57,14 @@ function loadAnimations() {
         // .addIndicators()
         .offset(-80).reverse(false).addTo(controller);
     });
+
+    $('.img-caption.animate').each(function () {
+        new ScrollMagic.Scene({
+            triggerElement: this
+        }).setClassToggle(this, 'reveal')
+        // .addIndicators()
+        .offset(-400).reverse(false).addTo(controller);
+    });
 }
 
 $(document).ready(function () {
