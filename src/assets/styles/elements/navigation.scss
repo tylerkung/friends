@@ -158,9 +158,13 @@
         }
         @media (max-width: 768px){
             padding: 0;
-            grid-row: 2 / span 14; 
+            grid-row: 2 / span 14;
             .social-icons{
                 display: none;
+            }
+            .site-title{
+                line-height: 1;
+                font-size: 0.8em;
             }
         }
     }

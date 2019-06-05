@@ -1,6 +1,10 @@
 .btn{
     border-radius: 0;
     padding: 1rem 2rem;
+    @media (max-width: 767px){
+        width: 100%;
+        margin-bottom: 1rem;
+    }
 }
 .btn-primary{
     background-color: #eee;
@@ -18,8 +22,10 @@
     &:hover, &:active{
         background-color: #212121 !important;
         border-color: #eee !important;
-    } 
+    }
 }
 span.btn + span.btn{
-    margin-left: 25px;
+    @media (min-width: 768px){
+        margin-left: 25px;
+    }
 }
