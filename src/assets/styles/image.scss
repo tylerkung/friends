@@ -63,9 +63,11 @@ div[class*="image"]{
     &.animate{
         transform: translate(20px, 20px);
         transition: transform 1s ease;
+        -webkit-transition: transform 1s ease;
         &:before{
             transform: translate(-30px, -30px);
             transition: transform 1s ease;
+            -webkit-transition: transform 1s ease;
         }
     }
     &.white{
@@ -184,10 +186,12 @@ div[class*="image"]{
         visibility: visible;
         transform: translateX(-101%);
         transition: transform 1.2s ease-out;
+        -webkit-transition: transform 1.2s ease-out;
     }
     &.animate{
         visibility: hidden;
         transition: visibility 0.1s 0.3s ease;
+        -webkit-transition: visibility 0.1s 0.3s ease;
     }
     &.reveal{
         visibility: visible;

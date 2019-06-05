@@ -48,15 +48,16 @@
             width: 40px;
             margin-bottom: 6px;
             transition: all 0.4s ease;
+            -webkit-transition: all 0.4s ease;
             &:nth-child(2){
                 width: 30px;
-                // transition-delay: 0.1s;
             }
         }
         &:not(.active) .menu-button:hover{
             .bar{
                 width: 45px;
                 transition-duration: .2s;
+                -webkit-transition-duration: .2s;
                 &:nth-child(2){
                     width: 33px;
                 }
@@ -68,6 +69,7 @@
                 width: 30px !important;
                 transform: rotate(135deg);
                 transition: all 0.7s cubic-bezier(0,.9,.25,1);
+                -webkit-transition: all 0.7s cubic-bezier(0,.9,.25,1);
                 &:nth-child(2){
                     margin-top: -4px;
                     transform: rotate(-135deg);
@@ -97,6 +99,7 @@
         .menu-wrapper{
             transform: translateX(-101%);
             transition: all 0.5s cubic-bezier(.15,.6,.33,1);
+            -webkit-transition: all 0.5s cubic-bezier(.15,.6,.33,1);
             background-color: rgba(0,0,0,0.93);
             height: 100%;
             padding: 100px 6.25%;
@@ -110,6 +113,7 @@
                 opacity: 0;
                 transform: translateY(10px);
                 transition: all 0.2s ease;
+                -webkit-transition: all 0.2s ease;
                 margin-bottom: 2rem;
             }
         }
@@ -123,9 +127,11 @@
                     transform: translateY(0px);
                     opacity: 1;
                     transition: all 0.35s ease;
+                    -webkit-transition: all 0.35s ease;
                     @for $i from 1 through 10{
                         &:nth-child(#{$i}){
                             transition-delay: 0.3s + (0.1s * $i);
+                            -webkit-transition-delay: 0.3s + (0.1s * $i);
                         }
                     }
                 }
