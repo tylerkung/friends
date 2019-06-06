@@ -110,7 +110,7 @@
                 <div class="gallery-list">
                     <div v-for="(item, index) in gallery" class="gallery-list-item" @click="setActive(index)" :class="{'active': index == activeIndex}">
                         <!--  -->
-                            <div class="g-item-image">
+                            <div class="g-item-img">
                                 <img :src="item['image-1']"/>
                             </div>
                         <!--  -->
@@ -129,7 +129,7 @@
             
             var eventsApp = new Vue({
                 delimiters: ['${', '}'],
-                el: '.gallery',
+                el: '.event-gallery',
                 data: {
                     gallery: data.data,
                     classes: "event-gallery",
