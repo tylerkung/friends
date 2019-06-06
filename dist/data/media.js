@@ -8,6 +8,7 @@ export default{
         {
             "imageURL": '/img/childish-1.jpg',
             "attr": {
+                'feature-poster': 'true'
             }
         },
         {
@@ -61,6 +62,7 @@ export default{
         {
             "imageURL": '/img/kaytranada.jpg',
             "attr": {
+                'wide': 'true'
             }
         },
         {

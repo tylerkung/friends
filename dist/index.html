@@ -219,6 +219,106 @@
                     </div>
                 </div>
             </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2>Photos</h2>
+                    <div class="gallery media-gallery ">
+                        <div v-for="(item, index) in gallery" class="gallery-list-item" :class="{
+                            'big': item['attr']['big'],
+                            'wide': item['attr']['wide'],
+                            'tall': item['attr']['tall'],
+                            'feature': item['attr']['feature'],
+                            'tall-2': item['attr']['tall-2'],
+                            'feature-poster': item['attr']['feature-poster']
+                        }"
+                        @click="openModal(index)">
+                            <div class="g-item-img">
+                                <img :src="item['imageURL']"/>
+                            </div>
+                        </div>
+                        <div class="img-overlay" :class="{'open': modalOpen}">
+                            <div class="close-modal" @click="closeModal()">
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                            </div>
+                            <div class="img-container">
+                                <img :src="activeImg" @click="nextImg()">
+                            </div>
+                            <div class="arrow-left">
+                                <i class="fab fas-chevron-left"></i>
+                            </div>
+                            <div class="arrow-right"></div>
+                        </div>
+                    </div>
+                    
+                    <script type="module">
+                        import data from '/data/home-gallery.js'
+                    
+                        var mediaApp = new Vue({
+                            delimiters: ['${', '}'],
+                            el: '.media-gallery',
+                            data: {
+                                modalOpen: false,
+                                // gallery: data.data,
+                                activeIndex: 0,
+                                activeItem: '',
+                                activeImg: ''
+                            },
+                            computed: {
+                                maxItems: function(){
+                                    return 100;
+                                },
+                                gallery: function(){
+                                    return data.data.slice(0, this.maxItems);
+                                }
+                            },
+                            methods: {
+                                openModal: function(i){
+                                    this.setActive(i);
+                                    this.modalOpen = true;
+                                },
+                                closeModal: function(){
+                                    this.modalOpen = false;
+                                },
+                                setActive: function(i){
+                                    this.activeIndex = i;
+                                    this.activeItem = this.gallery[this.activeIndex];
+                                    this.activeImg = this.activeItem['imageURL']
+                                },
+                                nextImg: function(){
+                                    if (!this.modalOpen) return;
+                                    else if(this.gallery.length-1 == this.activeIndex){
+                                        this.setActive(0);
+                                    }else{
+                                        this.setActive(this.activeIndex+1);
+                                    }
+                                },
+                                prevImg: function(){
+                                    if (!this.modalOpen) return;
+                                    else if(0 == this.activeIndex){
+                                        this.setActive(this.gallery.length-1);
+                                    }else{
+                                        this.setActive(this.activeIndex-1);
+                                    }
+                                }
+                            }
+                        })
+                    
+                        $(document).keyup(function(e) {
+                            if (e.key === "Escape") { // escape key maps to keycode `27`
+                                mediaApp.closeModal();
+                            }
+                            if (e.key === "ArrowRight") { // escape key maps to keycode `27`
+                                mediaApp.nextImg();
+                            }
+                            if (e.key === "ArrowLeft") { // escape key maps to keycode `27`
+                                mediaApp.prevImg();
+                            }
+                        });
+                    </script>
+                    <p><a href="/media"><span class="btn btn-primary">View More</span></a></p>
+                </div>
+            </div>
         </div>
     </div>
 </div>

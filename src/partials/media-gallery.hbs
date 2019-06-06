@@ -1,8 +1,11 @@
-<div class="gallery media-gallery">
+<div class="gallery media-gallery {{gallery-classes}}">
     <div v-for="(item, index) in gallery" class="gallery-list-item" :class="{
         'big': item['attr']['big'],
         'wide': item['attr']['wide'],
-        'tall': item['attr']['tall']
+        'tall': item['attr']['tall'],
+        'feature': item['attr']['feature'],
+        'tall-2': item['attr']['tall-2'],
+        'feature-poster': item['attr']['feature-poster']
     }"
     @click="openModal(index)">
         <div class="g-item-img">
@@ -15,7 +18,7 @@
             <div class="bar"></div>
         </div>
         <div class="img-container">
-            <img :src="activeImg">
+            <img :src="activeImg" @click="nextImg()">
         </div>
         <div class="arrow-left">
             <i class="fab fas-chevron-left"></i>
@@ -25,16 +28,33 @@
 </div>
 
 <script type="module">
+    {{#if data-url}}
+    import data from '{{data-url}}'
+    {{else}}
     import data from '/data/media.js';
+    {{/if}}
+
     var mediaApp = new Vue({
         delimiters: ['${', '}'],
         el: '.media-gallery',
         data: {
             modalOpen: false,
-            gallery: data.data,
+            // gallery: data.data,
             activeIndex: 0,
             activeItem: '',
             activeImg: ''
+        },
+        computed: {
+            maxItems: function(){
+                {{#if max-items}}
+                return {{max-items}}
+                {{else}}
+                return 100;
+                {{/if}}
+            },
+            gallery: function(){
+                return data.data.slice(0, this.maxItems);
+            }
         },
         methods: {
             openModal: function(i){
