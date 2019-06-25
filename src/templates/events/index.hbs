@@ -23,7 +23,18 @@
                     </div>
                 </div>
             </div>
-            {{> events-gallery}}
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2>Past Events</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        {{> media-gallery data-url='/data/data.js' gallery-classes='thumbnail-list'}}
+                    </div>
+                </div>
+            </div>
         </div>
      {{> footer}}
   </body>

@@ -193,7 +193,7 @@
         <div class="secondary-header">
             <div class="row">
                 <div class="col-sm-12">
-                    <p><strong>FRIENDS HAS ALWAYS BEEN ABOUT BRINGING PEOPLE TOGETHER ORGANICALLY THROUGH VARIOUS GENRES OF MUSIC AND EVENTS.</strong> WE BELIEVE OUR PARTIES SHOULD HAVE NO BOUNDARIES CONSTRUCTED BY SOCIAL NORMALITIES. WE WANT EVERYONE'S INDIVIDUALITIES TO COME OUT AT A SAFE ENVIRONMENT WHERE THERE'S NO JUDGEMENT OR CRITICISM. AT THE END OF THE DAY WE'RE ALL HERE TO HAVE A GOOD TIME WITH OUR FRIENDS.</p>
+                    <p><strong>FRIENDS has always been about bringing people together organically through various genres of music and events.</strong> We believe our parties should have no boundaries constructed by social normalities. We want everyone's individualities to come out at a safe environment where there's no judgement or criticism. At the end of the day we're all here to have a good time with our FRIENDS.</p>
                 </div>
             </div>
         </div>
@@ -231,6 +231,15 @@
                         @click="openModal(index)">
                             <div class="g-item-img">
                                 <img :src="item['imageURL']"/>
+                            </div>
+                            <div class="g-item-content">
+                                <div v-if="item['title']" class="content-title">
+                                    ${item['title']}
+                                </div>
+                                <div class="content-date">
+                                </div>
+                                <div class="content-description">
+                                </div>
                             </div>
                         </div>
                         <div class="img-overlay" :class="{'open': modalOpen}">

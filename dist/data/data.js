@@ -2,66 +2,84 @@ export default{
     "data": [
     	  {
     		  "title": "Bow Wow",
-    		  "image-1": "/img/events/bowwow-origin.jpg",
+    		  "imageURL": "/img/events/bowwow-origin.jpg",
     		  "image-2": "",
+              "date": "",
     		  "description": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    		  "link": ""
+    		  "link": "",
+              "attr": {}
     	  },
     	  {
     		  "title": "Friends at the Function",
-    		  "image-1": "/img/events/friends-theknockout.jpg",
+    		  "imageURL": "/img/events/friends-theknockout.jpg",
     		  "image-2": "",
+              "date": "",
     		  "description": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    		  "link": ""
+    		  "link": "",
+              "attr": {}
     	  },
     	  {
     		  "title": "Noodles",
-    		  "image-1": "/img/events/noodles-1015.jpg",
+    		  "imageURL": "/img/events/noodles-1015.jpg",
     		  "image-2": "",
+              "date": "",
     		  "description": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    		  "link": ""
+    		  "link": "",
+              "attr": {}
     	  },
     	  {
     		  "title": "Function",
-    		  "image-1": "/img/events/function-mezzanine.jpg",
+    		  "imageURL": "/img/events/function-mezzanine.jpg",
     		  "image-2": "",
+              "date": "",
     		  "description": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    		  "link": ""
+    		  "link": "",
+              "attr": {}
     	  },
     	  {
     		  "title": "Friends at the Function",
-    		  "image-1": "/img/events/function-theknockout.jpg",
+    		  "imageURL": "/img/events/function-theknockout.jpg",
     		  "image-2": "",
+              "date": "",
     		  "description": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    		  "link": ""
+    		  "link": "",
+              "attr": {}
     	  },
     	  {
     		  "title": "Wootoberfest",
-    		  "image-1": "/img/events/wootoberfest-theendup.png",
+    		  "imageURL": "/img/events/wootoberfest-theendup.png",
     		  "image-2": "",
+              "date": "",
     		  "description": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    		  "link": ""
+    		  "link": "",
+              "attr": {}
     	  },
     	  {
     		  "title": "Friend Request",
-    		  "image-1": "/img/events/friendrequest-origin.jpg",
+    		  "imageURL": "/img/events/friendrequest-origin.jpg",
     		  "image-2": "",
+              "date": "",
     		  "description": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    		  "link": ""
+    		  "link": "",
+              "attr": {}
     	  },
     	  {
     		  "title": "Don't Miss Ya Friends",
-    		  "image-1": "/img/events/dontmiss-rustedmule.jpg",
+    		  "imageURL": "/img/events/dontmiss-rustedmule.jpg",
     		  "image-2": "",
+              "date": "",
     		  "description": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    		  "link": ""
+    		  "link": "",
+              "attr": {}
     	  },
     	  {
     		  "title": "Space 2950",
-    		  "image-1": "/img/events/space2950-f8.jpg",
+    		  "imageURL": "/img/events/space2950-f8.jpg",
     		  "image-2": "",
+              "date": "",
     		  "description": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    		  "link": ""
+    		  "link": "",
+              "attr": {}
     	  }
       ]
 }

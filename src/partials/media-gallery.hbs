@@ -11,6 +11,15 @@
         <div class="g-item-img">
             <img :src="item['imageURL']"/>
         </div>
+        <div class="g-item-content">
+            <div v-if="item['title']" class="content-title">
+                ${item['title']}
+            </div>
+            <div class="content-date">
+            </div>
+            <div class="content-description">
+            </div>
+        </div>
     </div>
     <div class="img-overlay" :class="{'open': modalOpen}">
         <div class="close-modal" @click="closeModal()">
